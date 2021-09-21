@@ -1,0 +1,15 @@
+version: '3'
+services:
+  sqldata:
+    image: mcr.microsoft.com/mssql/server
+    environment:
+      - SA_PASSWORD=SaPass@word
+      - ACCEPT_EULA=Y
+
+  nginx:
+    image: sadmins/nginx
+    ports:
+      - "80:80"
+
+  dpa:
+    image: sadmins/dpa

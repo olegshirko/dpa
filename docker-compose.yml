@@ -5,6 +5,8 @@ services:
     environment:
       - SA_PASSWORD=SaPass@word
       - ACCEPT_EULA=Y
+    ports:
+      - "1433:1433"
 
   nginx:
     image: sadmins/nginx
@@ -13,3 +15,5 @@ services:
 
   dpa:
     image: sadmins/dpa
+    ports:
+      - "8123:8123"

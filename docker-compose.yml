@@ -17,3 +17,4 @@ services:
     image: sadmins/dpa
     ports:
       - "8123:8123"
+    stdin_open: true
